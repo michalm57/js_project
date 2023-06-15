@@ -9,7 +9,7 @@
     <title>Slider</title>
 
     <script type="text/javascript">
-        let slideNumber = Math.floor(Math.random() * 5) + 1;
+        let randomSlideNumber = Math.floor(Math.random() * 5) + 1;
 
         let timerOne = 0;
         let timerTwo = 0;
@@ -18,23 +18,27 @@
             clearTimeout(timerOne);
             clearTimeout(timerTwo);
 
-            slideNumber = slideNumber - 1;
-
             hideSlide();
-            setTimeout("changeSlide()", 500);
+            setTimeout(function () {
+                changeSlide(slideNumber);
+            }, 500);
         }
 
         function hideSlide() {
             $("#slider").fadeOut(500);
         }
 
-        function changeSlide() {
-            slideNumber++;
-            if (slideNumber > 5) {
-                slideNumber = 1;
+        function changeSlide(slideNumber = null) {
+            randomSlideNumber++;
+            if (randomSlideNumber > 5) {
+                randomSlideNumber = 1;
             }
 
-            var file = "<img src=\"slides/slide_" + slideNumber + ".png\" />"
+            var file = "<img src=\"slides/slide_" + randomSlideNumber + ".png\" />"
+
+            if (slideNumber) {
+                file = "<img src=\"slides/slide_" + slideNumber + ".png\" />"
+            }
 
             document.getElementById("slider").innerHTML = file;
             $("#slider").fadeIn(500);
