@@ -39,8 +39,8 @@
             document.getElementById("slider").innerHTML = file;
             $("#slider").fadeIn(500);
 
-            timerOne = ("changeSlide()", 5000);
-            timerTwo = ("hideSlide()", 4500);
+            timerOne = setTimeout("hideSlide()", 4500);
+            timerTwo = setTimeout("changeSlide()", 5000);
         }
     </script>
     <style>
