@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Check number</title>
+
+    <script type="text/javascript">
+
+        function checkNumber() {
+            let number = document.getElementById('number').value;
+
+            if (number.length == 0) {
+                document.getElementById("result").innerHTML = "Field can not be empty!";
+            } else if (number > 0) {
+                document.getElementById("result").innerHTML = "Positive";
+            } else if (number < 0) {
+                document.getElementById("result").innerHTML = "Negative";
+            } else if (number == 0) {
+                document.getElementById("result").innerHTML = "Equal to zero";
+            } else {
+                document.getElementById("result").innerHTML = "It's not a number";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="number" id="number" />
+    <input type="submit" value="Check" onclick="checkNumber()" />
+
+    <div id="result"></div>
+</body>
+
+</html>
