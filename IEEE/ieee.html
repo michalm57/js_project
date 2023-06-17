@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>IEEE 754 Standards</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JS -->
+    <script type="text/javascript">
+        document.write(0.1 * 5); document.write("<br />");
+
+        document.write((0.15 * 3).toFixed(2)); document.write("<br />");
+
+        document.write(0.1 + 0.2); document.write("<br />");
+
+        document.write(Math.pow(2, 53)); document.write("<br />");
+
+        document.write(Math.pow(2, 53) + 1); document.write("<br />");
+
+        document.write(Math.pow(2, 53) + 2); document.write("<br />");
+
+        document.write(Math.pow(2, 53) * 2); document.write("<br />");
+
+        if (0.1 + 0.2 == 3) {
+            document.write("true <br />");
+        } else {
+            document.write("false <br />");
+        }
+
+        let x = Math.round((0.1 + 0.2) * 10) / 10;
+
+        document.write(x + "<br />");
+
+        let y = Math.round((0.15 * 3) * 100) / 100;
+
+        document.write(y + "<br />");
+
+        let z = 0.15 * 3;
+        document.write(z.toFixed(2) + "<br />");
+
+        x = 1.005;
+        let b = Math.round(x * 1000) / 1000;
+        document.write(b + "<br />");
+        document.write(x.toFixed(3) + "<br />");
+
+        Number.prototype.round = function (decimalPlaces) {
+            return +(Math.round(this + "e+" + decimalPlaces) + "e-" + decimalPlaces);
+        }
+
+        x = 1.005;
+        document.write(x.round(2) + "<br />");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
