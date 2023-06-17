@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Math functions</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JS -->
+    <script type="text/javascript">
+        let pln = 1000;
+        document.write("Payment: " + pln + " PLN <br/ ><br />");
+
+        let usd = pln / 4.0715;
+        document.write("Balance: " + usd + " USD <br/ >");
+
+        usd = Math.floor(usd * 100) / 100;
+        document.write("Balance: " + usd + " USD <br/ ><br/ >");
+
+        let shopping = 23.99;
+        document.write("Shopping: " + shopping + " USD <br/ >");
+
+        let commission = 0.02 * shopping;
+        document.write("Commission: " + commission + " USD <br/ >");
+
+        commission = Math.ceil((commission * 100) / 100);
+        document.write("Commission: " + commission + " USD <br/ >");
+
+        usd = usd - shopping - commission;
+        document.write("Balance: " + usd + " USD <br/ >");
+
+        usd  = 225.99;
+        usd = Math.trunc(usd);
+        document.write("Balance: " + usd + " USD <br/ >");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
