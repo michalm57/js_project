@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dom Hierarchy</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <article>
+            <div class="interface">
+                <label>
+                    n<sub>01</sub> = <input type="number" id="a">
+                </label>
+                <label>
+                    n<sub>02</sub> = <input type="number" id="b">
+                </label>
+                <label>
+                    How many terms are in the mathematical sequence? =====> <input type="number" id="how_much"
+                        value="20">
+                </label>
+            </div>
+            <div>
+                <input type="button" id="generate" value="Generate">
+            </div>
+            <div>
+                <div id="sequence"></div>
+                <div id="fi"></div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        document.getElementById('generate').addEventListener("click", generate);
+
+        function generate() {
+            let howMuch = document.getElementById("how_much").value;
+        }
+
+    </script>
+
+
+</body>
+</html>
