@@ -1,4 +1,24 @@
-body{
+body {
     background-color: #222222;
     color: #E9B64A;
+    font-family: Verdana;
+}
+
+div {
+    margin: 2px 0;
+}
+
+.interface {
+    margin: 15px 0;
+}
+
+#sequence,
+#phi {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.odd,
+.even{
+    color: #999;
 }
