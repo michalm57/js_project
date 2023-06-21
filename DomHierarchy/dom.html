@@ -3,32 +3,35 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Dom Hierarchy</title>
+    <title>Golden ratio</title>
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div class="header-wrapper">
+        <h1>Golden ratio</h1>
+    </div>
     <main>
         <article>
             <div class="interface">
                 <label>
-                    n<sub>01</sub> = <input type="number" id="a">
+                    n<sub>01</sub> = <input type="number" id="a" value="12">
                 </label>
                 <label>
-                    n<sub>02</sub> = <input type="number" id="b">
+                    n<sub>02</sub> = <input type="number" id="b" value="5">
                 </label>
                 <label>
                     How many terms are in the mathematical sequence? =====> <input type="number" id="how_much"
                         value="20">
                 </label>
             </div>
-            <div>
+            <div class="btn-wrapper">
                 <input type="button" id="generate" value="Generate">
             </div>
             <div>
                 <div id="sequence"></div>
-                <div id="Phi"></div>
+                <div id="phi"></div>
             </div>
         </article>
     </main>
