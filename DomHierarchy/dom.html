@@ -43,13 +43,15 @@
             let howMuch = document.getElementById("how_much").value;
             let a = document.querySelector('#a').value;
             let b = document.querySelector('#b').value;
+            let buffer;
 
             a = parseFloat(a);
             b = parseFloat(b);
             howMuch = parseInt(howMuch);
 
             if (isNaN(a) || isNaN(b) || isNaN(howMuch) || howMuch < 2) {
-                document.querySelector("#sequence").innerHTML = "<p>Podaj poprawne liczby!</p>";
+                document.querySelector("#sequence").innerHTML = "<p>Enter the correct numbers!</p>";
+                document.querySelector("#phi").innerHTML = '';
             } else {
                 let sequence = '<p>n<sub>x</sub></p>';
                 let ratios = '<p>&Phi; = n<sub>x</sub> &divide; n<sub>x-1</sub></p>';
