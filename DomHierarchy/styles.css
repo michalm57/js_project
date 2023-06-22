@@ -60,7 +60,7 @@ input[type=button] {
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: baseline;
-    width: auto;
+    width: 80px;
 }
 
 input[type=button]:hover,
@@ -80,4 +80,23 @@ input[type=button]:active {
 
 .header-wrapper{
     text-align: center;
+}
+
+.red-color{
+    color: red;
+}
+
+.green-color{
+    color: green;
+}
+
+.magenta-color{
+    color: magenta;
+}
+
+*:disabled {
+    background-color: dimgrey !important;
+    color: linen;
+    opacity: 1;
+    cursor: default !important;
 }
