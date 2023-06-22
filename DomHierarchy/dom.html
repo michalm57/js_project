@@ -26,8 +26,30 @@
                         value="20">
                 </label>
             </div>
+            <div class="interface">
+                <span>Color odd elements of sequence:</span>
+                <input type="button" name="odd" value="Red">
+                <input type="button" name="odd" value="Green">
+                <input type="button" name="odd" value="Magenta">
+
+                <span>Color even elements of sequence:</span>
+                <input type="button" class="even" value="Red">
+                <input type="button" class="even" value="Green">
+                <input type="button" class="even" value="Magenta">
+
+                <span>Color of &Phi;:</span>
+                <input type="button" class="phi" value="Red">
+                <input type="button" class="phi" value="Green">
+                <input type="button" class="phi" value="Magenta">
+
+                <span>Color of all elements:</span>
+                <input type="button" class="all" value="Red">
+                <input type="button" class="all" value="Green">
+                <input type="button" class="all" value="Magenta">
+            </div>
             <div class="btn-wrapper">
                 <input type="button" id="generate" value="Generate">
+                <input type="button" id="lock" value="Lock">
             </div>
             <div>
                 <div id="sequence"></div>
@@ -38,6 +60,44 @@
 
     <script>
         document.getElementById('generate').addEventListener("click", generate);
+
+        //Odd elemetns
+        let odd = document.getElementsByName('odd');
+
+        for (let i = 0; i < 3; i++) {
+            odd[i].addEventListener('click', colorOdd);
+        }
+
+        //Even elements
+        let even = document.querySelectorAll('.even');
+
+        even.forEach(button => {
+            let color = button.value;
+            button.addEventListener('click', function () {
+                colorEven(color);
+            });
+        });
+
+        //Phi elements
+        let phi = document.getElementsByClassName('phi');
+
+        for (let ratio of phi) {
+            let color = ratio.value;
+
+            ratio.addEventListener('click', () => {
+                colorPhi(color);
+            });
+        }
+
+        //All elements
+        let all = document.querySelectorAll('.all');
+
+        all.forEach(button => {
+            button.addEventListener('click', colorAll);
+        })
+
+        //Lock button
+        let button = document.querySelector('#lock').addEventListener('click', access);
 
         function generate() {
             let howMuch = document.getElementById("how_much").value;
@@ -82,7 +142,7 @@
                         buffer = '';
                     }
 
-                    if(b % 2 == 1){
+                    if (b % 2 == 1) {
                         sequence += '<div>' + buffer + i + ' ==> <span class="odd">' + b + '</span></div>';
                     } else {
                         sequence += '<div>' + buffer + i + ' ==> <span class="even">' + b + '</span></div>';
@@ -93,12 +153,72 @@
 
                 document.querySelector('#sequence').innerHTML = sequence;
                 document.querySelector('#phi').innerHTML = ratios;
-
-
-                
             }
         }
 
+        function colorOdd() {
+            let color = this.value;
+            let oddElements = document.getElementsByClassName('odd');
+
+            for (let item of oddElements) {
+                item.style.color = color;
+            }
+        }
+
+        function colorEven(col) {
+            let evenElements = document.querySelectorAll('span.even');
+
+            for (let item of evenElements) {
+                item.style.cssText = "color: " + col + ";";
+            }
+        }
+
+        function colorPhi(c) {
+            let phiElements = document.querySelectorAll('#phi span');
+
+            for (let ratio of phiElements) {
+                // ratio.style.cssText = '';
+                ratio.removeAttribute('style');
+
+                if (c == 'Red') {
+                    ratio.classList.add('red-color')
+                    ratio.classList.remove('green-color')
+                    ratio.classList.remove('magenta-color')
+                } else if (c == 'Green') {
+                    ratio.classList.add('green-color')
+                    ratio.classList.remove('red-color')
+                    ratio.classList.remove('magenta-color')
+                } else {
+                    ratio.classList.add('magenta-color')
+                    ratio.classList.remove('green-color')
+                    ratio.classList.remove('red-color')
+                }
+            }
+        }
+
+        function colorAll() {
+            let color = this.value;
+            let allElements = document.getElementsByTagName('span');
+
+            for (let element of allElements) {
+                element.style.color = color;
+            }
+        }
+
+        function access() {
+            let inputs = document.querySelectorAll('input:not(#lock)');
+
+            for (let input of inputs) {
+                input.toggleAttribute('disabled');
+            }
+
+            if (this.value = 'Lock') {
+                this.value = "Unlock"
+            } else {
+                this.value = "Lock"
+            }
+
+        }
     </script>
 
 
