@@ -23,6 +23,7 @@ for (let i = 0; i < 8; i++) {
 
     element.style.background = colors[i];
     element.addEventListener("click", guess, false);
+    element.color = colors[i];
 }
 
 function shuffle(array) {
@@ -44,6 +45,9 @@ function drawPill(x, y, type) {
     if (type == "empty") {
         ctx.strokeStyle = "white";
         ctx.strokeRect(x, y, PILL_WIDTH, PILL_HEIGHT);
+    } else {
+        ctx.fillStyle = type;
+        ctx.fillRect(x, y, PILL_WIDTH, PILL_HEIGHT);
     }
 }
 
@@ -55,10 +59,19 @@ function startBoard() {
     drawArrow();
 }
 
-function drawArrow(){
+function drawArrow() {
     ctx.fillStyle = "white";
     ctx.font = "32px Arial";
     ctx.fillText("↑", 135 + activePill * 100, 180);
+}
+
+function guess(event) {
+
+    if (activePill >= 0 && activePill <= 4) {
+        let pillColor = event.currentTarget.color;
+        drawPill(100 + activePill * 100, 50, pillColor);
+    }
+
 }
 
 window.addEventListener('load', () => {
