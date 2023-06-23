@@ -4,6 +4,8 @@ const ctx = canvas.getContext("2d");
 const PILL_WIDTH = 80;
 const PILL_HEIGHT = 80;
 
+var activePill = 0;
+
 var colors = ["firebrick", "seagreen", "dodgerblue", "orange", "yellow", "sienna", "magenta", "gray"];
 
 var colorsToSolution = ["firebrick", "seagreen", "dodgerblue", "magenta", "yellow"];
@@ -20,6 +22,7 @@ for (let i = 0; i < 8; i++) {
     let element = document.querySelector(name);
 
     element.style.background = colors[i];
+    element.addEventListener("click", guess, false);
 }
 
 function shuffle(array) {
@@ -49,7 +52,13 @@ function startBoard() {
         drawPill(100 + i * 100, 50, "empty");
     }
 
+    drawArrow();
+}
 
+function drawArrow(){
+    ctx.fillStyle = "white";
+    ctx.font = "32px Arial";
+    ctx.fillText("↑", 135 + activePill * 100, 180);
 }
 
 window.addEventListener('load', () => {
