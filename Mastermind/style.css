@@ -1,0 +1,26 @@
+body {
+    background-color: #222222;
+    color: #efefef;
+}
+
+h1 {
+    font-size: 54px;
+    color: orange;
+    text-align: center;
+    margin: 25px 0;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+}
+
+.board {
+    width: 800px;
+    height: 480px;
+    margin: 20px auto;
+}
+
+#game-canvas {
+    background-color: black;
+    width: 800px;
+    height: 480px;
+    border: 2px solid orange;
+}
