@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- TITLE -->
+    <title>Mastermind</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=no">
+
+</head>
+
+<body>
+    <main>
+        <article>
+            <header>
+                <h1>Mastermind</h1>
+            </header>
+            <div class="board">
+                <canvas id="game-canvas" width="800" height="480">
+            </div>
+            <div class="comment">
+                Which color to put in the place marked with an arrow?
+            </div>
+        </article>
+
+        <div class="controls">
+            <button id="c1"></button>
+            <button id="c2"></button>
+            <button id="c3"></button>
+            <button id="c4"></button>
+            <button id="c5"></button>
+            <button id="c6"></button>
+            <button id="c7"></button>
+            <button id="c8"></button>
+            <button id="delete">Correct</button>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="mastermind.js"></script>
+
+</body>
+
+</html>
