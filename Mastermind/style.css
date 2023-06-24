@@ -24,3 +24,21 @@ h1 {
     height: 480px;
     border: 2px solid orange;
 }
+
+.comment {
+    text-align: center;
+}
+
+.controls {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.controls button {
+    height: 80px;
+    width: 80px;
+}
+
+#delete{
+    background: url('images/remove.png');
+}
