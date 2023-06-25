@@ -27,6 +27,8 @@ h1 {
 
 .comment {
     text-align: center;
+    font-size: 32px;
+    color: orange;
 }
 
 .controls {
@@ -37,8 +39,58 @@ h1 {
 .controls button {
     height: 80px;
     width: 80px;
+    border-radius: 10px;
 }
 
-#delete{
-    background: url('images/remove.png');
+.controls button:hover {
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
+    cursor: pointer;
+}
+
+.controls button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#delete {
+    background: url('images/remove.png') no-repeat;
+    background-color: #fff;
+}
+
+#help {
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: #666;
+}
+
+#help:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.help {
+    display: none;
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    background-color: black;
+    border: 2px solid orange;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#close-help {
+    position: relative;
+    left: 350px;
+    color: orange;
+}
+
+#close-help:hover {
+    cursor: white;
+    cursor: pointer;
 }
