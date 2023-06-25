@@ -21,9 +21,9 @@ none.src = "images/none.png";
 //Arrays with colors
 var colors = ["firebrick", "seagreen", "dodgerblue", "orange", "yellow", "sienna", "magenta", "gray"];
 
-var colorsToSolution = ["firebrick", "seagreen", "dodgerblue", "magenta", "yellow"];
+var shuffleColors = shuffle(colors);
 
-var solution = shuffle(colorsToSolution);
+var solution = cutElementsFromArray(shuffleColors, 3);
 
 var state = ["empty", "empty", "empty", "empty", "empty"];
 
@@ -213,6 +213,14 @@ function drawScore() {
     ctx.fillText("Round", 660, 165);
 }
 
+
+function cutElementsFromArray(array, elemsToDelete){
+    while (elemsToDelete--){
+        array.pop();
+    }
+
+    return array;
+}
 
 window.addEventListener('load', () => {
     startBoard();
