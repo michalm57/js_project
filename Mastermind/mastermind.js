@@ -137,8 +137,49 @@ function checkBoard() {
     }
 
     //check is won
-    roundNo++;
-    drawScore();
+    let win = true;
+    for (let i = 0; i < 5; i++) {
+        if (state[i] != solution[i]) {
+            win = false;
+        }
+    }
+
+
+
+    if (win) {
+        ctx.fillStyle = "black";
+        ctx.fillRect(80, 20, 550, 200);
+
+        activePill = -999;
+        drawArrow();
+
+        ctx.fillStyle = "orange";
+        ctx.font = "78px Arial";
+        ctx.fillText("You Win!", 160, 130);
+        document.querySelector(".comment").innerHTML = "You win in " + roundNo + " round";
+
+        for (let i = 0; i < 8; i++) {
+            let name = "#c" + (i + 1);
+            let element = document.querySelector(name);
+            element.style.display = "none";
+        }
+
+        document.querySelector('#delete').style.display = "none";
+
+        document.querySelector(".controls").style.fontSize = "40px";
+        document.querySelector(".controls").innerHTML = '<span id="again">Play again?</span>';
+        document.querySelector("#again").style.cursor = "pointer";
+        document.querySelector("#again").addEventListener("click", () => {
+            window.location.reload();
+        }, false)
+
+
+    } else {
+        roundNo++;
+        drawScore();
+    }
+
+
 }
 
 function resetPill() {
@@ -151,7 +192,7 @@ function resetPill() {
 }
 
 
-function drawScore(){
+function drawScore() {
     ctx.fillStyle = "black";
     ctx.fillRect(640, 40, 110, 130);
 
@@ -178,4 +219,16 @@ window.addEventListener('load', () => {
     drawScore();
 })
 
+function showHelp() {
+    document.querySelector(".help").style.display = "block";
+}
+
+function closeHelp() {
+    document.querySelector(".help").style.display = "none";
+}
+
+
+
 document.querySelector("#delete").addEventListener("click", resetPill, false);
+document.querySelector("#help").addEventListener("click", showHelp, false);
+document.querySelector("#close-help").addEventListener("click", closeHelp, false);
