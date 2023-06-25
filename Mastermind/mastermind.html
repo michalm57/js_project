@@ -23,10 +23,32 @@
     <main>
         <article>
             <header>
-                <h1>Mastermind</h1>
+                <h1>Mastermind<span id="help">[?]</span></h1>
+
+                <div class="help">
+                    <span id="close-help">close [x]</span>
+                    <p>
+                        The object of MASTERMIND (r) is to guess a secret code consisting of a series of 5
+                        colored pegs. Each guest results in feedback narrowing down the possibilities of the
+                        code. The winner is the player who solves his opponent's secret code with fewer
+                        guesses.
+                        <br />
+                        <br />
+                        <img src="images/ok.png"> ==> You guessed the correct color in the correct place.
+                        <br />
+                        <br />
+                        <img src="images/elsewhere.png"> ==> You guessed the correct color, but it is in a different place.
+                        <br />
+                        <br />
+                        <img src="images/none.png"> ==> The guessed color does not appear on the board.
+                        <br />
+                        <br />
+                        <img src="images/remove.png"> ==> Undo previous move.
+                    </p>
+                </div>
             </header>
             <div class="board">
-                <canvas id="game-canvas" width="800" height="480">
+                <canvas id="game-canvas" width="800" height="480"></canvas>
             </div>
             <div class="comment">
                 Which color to put in the place marked with an arrow?
