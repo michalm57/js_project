@@ -1,0 +1,25 @@
+body {
+    background-color: #222222;
+    font-family: Verdana;
+    font-size: 20px;
+    color: #ffff;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+/*Not visited link*/
+a:link {
+    color: gold;
+}
+
+/*Visited link*/
+a:visited {
+    color: gold;
+}
+
+/*Hover over link*/
+a:hover {
+    color: firebrick;
+}
