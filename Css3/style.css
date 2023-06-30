@@ -1,0 +1,26 @@
+body{
+    background-color: #303030;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+    padding: 40px 0;
+}
+
+.logo{
+    width: 450px;
+    font-size: 48px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav{
+    width: 100%;
+}
