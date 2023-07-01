@@ -1,0 +1,65 @@
+body {
+    /*Background patter from: https://www.toptal.com/designers/subtlepatterns*/
+    background-image: url("img/moroccan-flower.png");
+    font-size: 20px;
+}
+
+#container {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    -webkit-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+    box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 300px;
+    background-color: #efefef;
+    color: #666666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+    box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+    border: 2px solid #a5cda5;
+    background-color: #e9f3e9;
+    color: #428c42;
+}
+
+input[type="submit"] {
+    width: 300px;
+    background-color: #36b03c;
+    color: #ffffff;
+    padding: 15px 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 20px;
+    outline: none;
+}
+
+input[type="submit"]:focus {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+    box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+}
+
+
+input[type="submit"]:hover {
+    background-color: #37b93d;
+}
