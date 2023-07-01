@@ -27,6 +27,7 @@ input[type="password"] {
     padding: 10px;
     box-sizing: border-box;
     outline: none;
+    margin-top: 10px;
 }
 
 input[type="text"]:focus,
@@ -44,7 +45,7 @@ input[type="submit"] {
     background-color: #36b03c;
     color: #ffffff;
     padding: 15px 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -62,4 +63,12 @@ input[type="submit"]:focus {
 
 input[type="submit"]:hover {
     background-color: #37b93d;
+}
+
+input::-webkit-input-placeholder{
+    color: #999;
+}
+
+input:focus::-webkit-input-placeholder{
+    color: #428c42;
 }
