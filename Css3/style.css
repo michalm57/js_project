@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #303030;
     color: #ffffff;
     font-family: 'Lato', sans-serif;
@@ -6,23 +6,23 @@ body{
     margin: 0 !important;
 }
 
-.wrapper{
+.wrapper {
     width: 100%;
 }
 
-.header{
+.header {
     width: 100%;
     padding: 40px 0;
 }
 
-.logo{
+.logo {
     width: 450px;
     font-size: 48px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.nav{
+.nav {
     width: 100%;
     padding: 10px 0;
     background-color: #c34f4f;
@@ -31,7 +31,7 @@ body{
     border-bottom: 1px solid #751b1b;
 }
 
-.content{
+.content {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -39,69 +39,69 @@ body{
     padding-top: 10px;
 }
 
-.socials{
+.socials {
     width: 100%;
     text-align: center;
     background-color: #292929;
 }
 
-.socialdivs{
+.socialdivs {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.fb{
+.fb {
     width: 250px;
     height: 155px;
     float: left;
 }
 
-.fb:hover{
+.fb:hover {
     background-color: #4668b3;
     cursor: pointer;
 }
 
-.yt{
+.yt {
     width: 250px;
     height: 155px;
     float: left;
 }
 
-.yt:hover{
+.yt:hover {
     background-color: #d94348;
     cursor: pointer;
 }
 
-.tw{
+.tw {
     width: 250px;
     height: 155px;
     float: left;
 }
 
-.tw:hover{
+.tw:hover {
     background-color: #3095d3;
     cursor: pointer;
 }
 
-.gplus{
+.gplus {
     width: 250px;
     height: 155px;
     float: left;
 }
 
-.gplus:hover{
+.gplus:hover {
     background-color: #d95333;
     cursor: pointer;
 }
 
-.footer{
+.footer {
     text-align: center;
     background-color: #222222;
     padding: 30px;
 }
 
-.sticky{
+.sticky {
     width: 100%;
     position: fixed;
     left: 0;
@@ -109,7 +109,7 @@ body{
     z-index: 100;
 }
 
-ul{
+ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -119,15 +119,55 @@ ul{
     display: inline-block;
 }
 
-ul a{
+ul a {
     color: #ffffff;
     text-decoration: none;
     display: block;
 }
 
-ul > li {
+ul>li {
     float: left;
     width: 150px;
     height: 40px;
     border-right: 1px dashed #751b1b;
+}
+
+ul>li.first-element {
+    border-left: 1px dashed #751b1b;
+}
+
+ul>li:hover {
+    background-color: #cf6969;
+}
+
+ul>li:hover>a {
+    color: #451717;
+}
+
+ul>li>ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    display: none;
+}
+
+ul>li:hover>ul {
+    display: block;
+}
+
+ul>li>ul>li {
+    background-color: #cf6969;
+    position: relative;
+    z-index: 100;
+    border-top: 1px dashed #751b1b;
+}
+
+ul>li>ul>li:hover {
+    background-color: #c34f4f;
+
+}
+
+ul>li>ul>li:hover>a {
+    color: #451717;
 }
