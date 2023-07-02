@@ -1,0 +1,166 @@
+body {
+    /*Background patter from: https://www.toptal.com/designers/subtlepatterns*/
+    background-color: #222222;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #39a5f1;
+    text-transform: uppercase;
+}
+
+.postcard {
+    display: inline-block;
+    width: 460px;
+    text-align: center;
+    padding: 5px;
+}
+
+.postcard p {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+article {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Hover effects */
+
+.photo1 {
+    width: 450px;
+    transition: all 0.2s ease-in-out;
+}
+
+.photo1:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.photo2 {
+    width: 450px;
+    transition: all .2s ease-in-out;
+}
+
+.photo2:hover { 
+    transform: scale(0.95) rotate(5deg);
+    cursor: pointer;
+}
+
+
+.photo3 {
+    width: 450px;
+}
+
+.photo3:hover {
+    cursor: pointer;
+}
+
+.overlay{
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.overlay .link{
+    color: #fff;
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 65px;
+    background-color: #111;
+    left: 0px;
+    bottom: 0px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.overlay:hover .link{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.photo4 {
+    width: 450px;
+}
+
+.photo4:hover {
+    cursor: pointer;
+}
+
+.overlayT{
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.overlayT .link{
+    color: #fff;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #27a38d;
+    left: 0px;
+    top: 0px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.overlayT:hover .link{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.icon{
+    display: block;
+    top: 25%;
+    position: relative;
+    font-size: 72px;
+}
+
+.photo5 {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.photo5:hover {
+    cursor: pointer;
+}
+
+.photo5 img{
+    transition: all 0.5s ease-in-out;
+}
+
+.photo5:hover img {
+    transform: scale(1.15);
+}
+
+.photo6 {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.photo6 img{
+    transition: all 0.7s ease-in-out;
+}
+
+.photo6:hover img {
+    transform: scale(1.2) rotate(-5deg);
+}
