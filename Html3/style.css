@@ -1,6 +1,8 @@
 body{
     background-color: #303030;
     color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 
 #container{
@@ -12,4 +14,64 @@ body{
 .rectangle{
     width: 960px;
     margin: 20px;
+}
+
+.square{
+    width: 50%;
+    float: left;
+}
+
+.logo{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    width: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.zegar{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tile1{
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #3095d3;
+    float: left;
+}
+
+.tile2{
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #666666;
+    float: left;
+}
+
+.tile3{
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #93c748;
+    float: left;
+}
+
+.tile4{
+    margin: 10px;
+    height: 142px;
+    background-color: #ee5232;
+    width: 480px;
+}
+
+.tile5{
+    margin: 10px;
+    width: 480px;
+    height: 304px;
+    background-color: #666666;
 }
