@@ -14,6 +14,7 @@ body{
 .rectangle{
     width: 960px;
     margin: 20px;
+    text-align: center;
 }
 
 .square{
@@ -28,6 +29,7 @@ body{
     width: 600px;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .zegar{
@@ -36,6 +38,7 @@ body{
     font-size: 70px;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .tile1{
@@ -44,6 +47,7 @@ body{
     height: 142px;
     background-color: #3095d3;
     float: left;
+    text-align: center;
 }
 
 .tile2{
@@ -52,6 +56,7 @@ body{
     height: 142px;
     background-color: #666666;
     float: left;
+    text-align: center;
 }
 
 .tile3{
@@ -60,6 +65,7 @@ body{
     height: 142px;
     background-color: #93c748;
     float: left;
+    text-align: center;
 }
 
 .tile4{
@@ -67,6 +73,7 @@ body{
     height: 142px;
     background-color: #ee5232;
     width: 480px;
+    text-align: center;
 }
 
 .tile5{
@@ -74,4 +81,37 @@ body{
     width: 480px;
     height: 304px;
     background-color: #666666;
+    text-align: center;
+}
+
+.yt{
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #d94348;
+    float: left;
+}
+
+.fb{
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #4668b3;
+    float: left;
+}
+
+.gplus{
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #d95333;
+    float: left;
+}
+
+.tw{
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #3095d3;
+    float: left;
 }
