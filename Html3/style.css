@@ -155,3 +155,16 @@ body{
     background-color: #2084c2;
     cursor: pointer;
 }
+
+a.tilelink{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 230px;
+    height: 142px;
+}
+
+a.tilelinkhtml5{
+    color: #fff;
+    text-decoration: none;
+}
