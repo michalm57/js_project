@@ -11,9 +11,30 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-
 <body>
-
+    <div class="calculator">
+        <div class="screen">
+        </div>
+        <div class="buttons">
+            <button onclick="clearScreen()">C</button>
+            <button onclick="appendCharacter('/')">/</button>
+            <button onclick="appendCharacter('*')">*</button>
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('9')">9</button>
+            <button onclick="appendCharacter('-')">-</button>
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('6')">6</button>
+            <button onclick="appendCharacter('+')">+</button>
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('3')">3</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendCharacter('0')">0</button>
+            <button onclick="appendCharacter('.')">.</button>
+        </div>
+    </div>
 
     <!-- JS -->
     <script type="text/javascript" src="calculator.js"></script>
