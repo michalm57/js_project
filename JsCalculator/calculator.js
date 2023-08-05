@@ -1,3 +1,5 @@
+let screenContent = "";
+
 function calculateSquareRoot() {
     const screen = document.querySelector('.screen');
     const currentValue = parseFloat(screen.textContent);
@@ -7,4 +9,9 @@ function calculateSquareRoot() {
     } else {
         screen.textContent = 'Error';
     }
+}
+
+function updateScreen() {
+    const screenElement = document.querySelector(".screen");
+    screenElement.textContent = screenContent;
 }
