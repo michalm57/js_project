@@ -15,3 +15,13 @@ function updateScreen() {
     const screenElement = document.querySelector(".screen");
     screenElement.textContent = screenContent;
 }
+
+function calculate() {
+    const screenText = document.querySelector('.screen').textContent;
+    try {
+        const result = eval(screenText);
+        document.querySelector('.screen').textContent = result;
+    } catch (error) {
+        document.querySelector('.screen').textContent = 'Error';
+    }
+}
