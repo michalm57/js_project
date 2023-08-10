@@ -25,3 +25,21 @@ function calculate() {
         document.querySelector('.screen').textContent = 'Error';
     }
 }
+
+window.onload = function() {
+    const buttons = document.querySelectorAll('.buttons button');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonText = this.textContent;
+            if (buttonText === '=') {
+                calculate();
+            } else if (buttonText === 'C') {
+                clearScreen();
+            } else if (buttonText === '√') {
+                calculateSquareRoot();
+            } else {
+                appendCharacter(buttonText);
+            }
+        });
+    });
+};
