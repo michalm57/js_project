@@ -31,11 +31,11 @@ window.onload = function() {
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             const buttonText = this.textContent;
-            if (buttonText === '=') {
+            if (buttonText == '=') {
                 calculate();
-            } else if (buttonText === 'C') {
+            } else if (buttonText == 'C') {
                 clearScreen();
-            } else if (buttonText === '√') {
+            } else if (buttonText == '√') {
                 calculateSquareRoot();
             } else {
                 appendCharacter(buttonText);
