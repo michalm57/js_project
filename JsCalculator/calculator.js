@@ -1,4 +1,4 @@
-let screenContent = "";
+let sceen = "";
 
 function calculateSquareRoot() {
     const screen = document.querySelector('.screen');
@@ -13,16 +13,16 @@ function calculateSquareRoot() {
 
 function updateScreen() {
     const screenElement = document.querySelector(".screen");
-    screenElement.textContent = screenContent;
+    screenElement.textContent = sceen;
 }
 
 function clearScreen() {
-    screenContent = ""; 
+    sceen = ""; 
     updateScreen();
 }
 
 function appendCharacter(character) {
-    screenContent += character;
+    sceen += character;
     updateScreen();
 }
 
