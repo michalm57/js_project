@@ -1,28 +1,28 @@
-let sceen = "";
+let screen = "";
 
 function calculateSquareRoot() {
-    const screen = document.querySelector('.screen');
-    const currentValue = parseFloat(screen.textContent);
+    const screenElement = document.querySelector('.screen');
+    const currentValue = parseFloat(screenElement.textContent);
     if (currentValue >= 0) {
         const result = Math.sqrt(currentValue);
-        screen.textContent = result.toFixed(2);
+        screenElement.textContent = result.toFixed(2);
     } else {
-        screen.textContent = 'Error';
+        screenElement.textContent = 'Error';
     }
 }
 
 function updateScreen() {
     const screenElement = document.querySelector(".screen");
-    screenElement.textContent = sceen;
+    screenElement.textContent = screen;
 }
 
 function clearScreen() {
-    sceen = ""; 
+    screen = "";
     updateScreen();
 }
 
 function appendCharacter(character) {
-    sceen += character;
+    screen += character;
     updateScreen();
 }
 
@@ -36,10 +36,10 @@ function calculate() {
     }
 }
 
-window.onload = function() {
+window.onload = function () {
     const buttons = document.querySelectorAll('.buttons button');
     buttons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const buttonText = this.textContent;
             if (buttonText === '=') {
                 calculate();
