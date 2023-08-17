@@ -1,38 +1,36 @@
 let screen = "";
+const screenElement = document.querySelector(".screen");
 
 function calculateSquareRoot() {
-    const screenElement = document.querySelector('.screen');
-    const currentValue = parseFloat(screenElement.textContent);
+    const currentValue = parseFloat(screen);
     if (currentValue >= 0) {
         const result = Math.sqrt(currentValue);
-        screenElement.textContent = result.toFixed(2);
+        updateScreen(result.toFixed(2));
     } else {
-        screenElement.textContent = 'Error';
+        updateScreen('Error');
     }
 }
 
-function updateScreen() {
-    const screenElement = document.querySelector(".screen");
-    screenElement.textContent = screen;
+function updateScreen(content) {
+    screenElement.textContent = content;
 }
 
 function clearScreen() {
     screen = "";
-    updateScreen();
+    updateScreen(screen);
 }
 
 function appendCharacter(character) {
     screen += character;
-    updateScreen();
+    updateScreen(screen);
 }
 
 function calculate() {
-    const screenText = document.querySelector('.screen').textContent;
     try {
-        const result = eval(screenText);
-        document.querySelector('.screen').textContent = result.toFixed(2);
+        const result = eval(screen);
+        updateScreen(result.toFixed(2));
     } catch (error) {
-        document.querySelector('.screen').textContent = 'Error';
+        updateScreen('Error');
     }
 }
 
