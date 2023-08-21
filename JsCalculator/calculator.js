@@ -3,11 +3,11 @@ const screenElement = document.querySelector(".screen");
 
 function calculateSquareRoot() {
     const currentValue = parseFloat(screen);
-    if (currentValue >= 0) {
+    if (!isNaN(currentValue) && currentValue >= 0) {
         const result = Math.sqrt(currentValue);
         updateScreen(result.toFixed(2));
     } else {
-        updateScreen('Error');
+        updateScreen("Error");
     }
 }
 
@@ -25,28 +25,37 @@ function appendCharacter(character) {
     updateScreen(screen);
 }
 
-function calculate() {
+function performCalculation() {
     try {
         const result = eval(screen);
-        updateScreen(result.toFixed(2));
+        if (typeof result === "number") {
+            updateScreen(result.toFixed(2));
+        } else {
+            updateScreen("Error");
+        }
     } catch (error) {
-        updateScreen('Error');
+        updateScreen("Error");
     }
 }
 
 window.onload = function () {
-    const buttons = document.querySelectorAll('.buttons button');
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
+    const buttons = document.querySelectorAll(".buttons button");
+    buttons.forEach((button) => {
+        button.addEventListener("click", function () {
             const buttonText = this.textContent;
-            if (buttonText === '=') {
-                calculate();
-            } else if (buttonText === 'C') {
-                clearScreen();
-            } else if (buttonText === '√') {
-                calculateSquareRoot();
-            } else {
-                appendCharacter(buttonText);
+            switch (buttonText) {
+                case "=":
+                    performCalculation();
+                    break;
+                case "C":
+                    clearScreen();
+                    break;
+                case "√":
+                    calculateSquareRoot();
+                    break;
+                default:
+                    appendCharacter(buttonText);
+                    break;
             }
         });
     });
