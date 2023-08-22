@@ -20,15 +20,10 @@ function clearScreen() {
     updateScreen(screen);
 }
 
-function appendCharacter(character) {
-    screen += character;
-    updateScreen(screen);
-}
-
 function performCalculation() {
     try {
         const result = eval(screen);
-        if (typeof result === "number") {
+        if (typeof result === "number" && isFinite(result)) {
             updateScreen(result.toFixed(2));
         } else {
             updateScreen("Error");
@@ -38,25 +33,25 @@ function performCalculation() {
     }
 }
 
+function appendCharacter(character) {
+    if (character === "C") {
+        clearScreen();
+    } else if (character === "=") {
+        performCalculation();
+    } else if (character === "√") {
+        calculateSquareRoot();
+    } else {
+        screen += character;
+        updateScreen(screen);
+    }
+}
+
 window.onload = function () {
     const buttons = document.querySelectorAll(".buttons button");
     buttons.forEach((button) => {
         button.addEventListener("click", function () {
             const buttonText = this.textContent;
-            switch (buttonText) {
-                case "=":
-                    performCalculation();
-                    break;
-                case "C":
-                    clearScreen();
-                    break;
-                case "√":
-                    calculateSquareRoot();
-                    break;
-                default:
-                    appendCharacter(buttonText);
-                    break;
-            }
+            appendCharacter(buttonText);
         });
     });
 };
