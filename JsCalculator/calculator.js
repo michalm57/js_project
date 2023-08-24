@@ -22,8 +22,10 @@ function clearScreen() {
 
 function performCalculation() {
     try {
-        const result = eval(screen);
-        if (typeof result === "number" && isFinite(result)) {
+        const sanitizedInput = screen.replace(/[^-()\d/*+.]/g, ''); // Sanitize input
+        const result = eval(sanitizedInput);
+
+        if (!isNaN(result) && isFinite(result)) {
             updateScreen(result.toFixed(2));
         } else {
             updateScreen("Error");
